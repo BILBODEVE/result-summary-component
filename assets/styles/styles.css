@@ -6,12 +6,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font: inherit;
-}
-
-img,svg {
-    display: block;
-    max-width: 100%;
+    padding: 0;
 }
 
 body {
@@ -19,140 +14,93 @@ body {
     color: hsl(224, 30%, 27%);
 }
 
-main {
+body  {
+   
+}    
+
+body {
+    display: grid;
+    place-items: center; /*Abreviatura de justify/align-items*/
+    
     min-height: 100vh;
+    
 }
 
-section {
+/*globals*/
+.grid {
     display: grid;
     place-items: center;
-    grid-template-columns: 1fr 1fr;
-
-    max-width: 46rem;
 }
 
+.your-result, .result-summary {
+    padding: 1.5rem;
+}
+
+/*inicio*/
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     
+    max-width: 46rem;
+    gap: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    section {
+        grid-template-columns: 1fr;     
+    }
+}
 
 .your-result {
-    text-align: center;
-    border-radius: 30px;
-    background: linear-gradient(hsla(241, 72%, 46%, 0)-182%, hsl(252, 100%, 57%)70%)}
+    gap: 2rem;
+    border-radius: 3vh;
+    background: linear-gradient(hsla(252, 100%, 67%), hsla(241, 81%, 54%));
 
-.your-result h1,h3 {
-    margin: 2rem 0;
+    text-align: center;
 }
 
 .your-result h1 {
-    font-size: 1.2em;
     color: hsl(241, 100%, 89%);
-    
 
-}
-
-.your-result .circle-result {
-    width: 12rem;
-    margin-inline: auto;
-    border-radius: 50%;
-    background: linear-gradient(hsla(241, 72%, 46%, 0)-161%, hsl(252, 100%, 57%)58%);
-    aspect-ratio: 1/1;
+    font-weight: 500;
 }
 
 .circle-result {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 12rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
 }
 
 .circle-result p {
+    color: hsl(0,0%,100%);
+
     font-size: 4em;
     font-weight: 700;
-    color: hsl(0, 0%, 100%);
 }
 
 .circle-result span {
     display: block;
-    color: hsl(241, 100%, 89%);
-    font-size: .250em;
-
+    font-size: .3em;
+    font-weight: 500;
+    color: hsl(241, 100%, 89%,.9);
 }
 
-.description-result h3{
-    font-size: 1.5em;
+.description-result h3 {
+    font-size: 1.6em;
     font-weight: 500;
+    color: hsl(0,0%,100%);
 }
 
 .description-result p {
-    padding: 0 3.2rem 3rem;
-    color: hsl(241, 100%, 89%);
+    max-width: 70%;
+    width: 100%;
+    margin: .8rem auto 0;
+
+    color: hsl(241, 100%, 89%,.9);
 }
+
 
 /*summary*/
-
-.result-summary {
-    margin: 1.8rem;
-    color: hsl(224, 30%, 27%);
-}
-
-.result-summary h2 {
-    margin-bottom: 1.6rem;
-    font-size: 1.4em;
-    font-weight: bold;
-}
-
-.summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 0;
-    padding: .8rem;
-    border-radius: 1vh;
-}
-
-.summary div {
-    display: flex;
-}
-
-.summary .nota p {
-    color: hsl(224, 30%, 27%);
-    font-weight: 700;
-}
-
-.summary .nota span {
-    color: hsl(224, 30%, 75%);
-}
-
-.summary svg {
-    margin-right: .8rem;
-}
-
-.reaction {
-color: hsl(0, 100%, 67%);    
-background-color: hsl(0, 100%, 98%);    
-}
-.memory {
-color: hsl(39, 100%, 56%);
-background-color: hsl(39, 100%, 98%);
-}
-.verbal {
-color: hsl(166, 100%, 37%);
-background-color: hsl(166, 100%, 98%);
-}
-.visual {
-color: hsl(234, 85%, 45%);
-background-color: hsl(234, 85%, 98%);
-}
-
-button {
-    background-color: hsl(224, 30%, 27%);
-    color: hsl(0, 0%, 100%);
-    border: none;
-    border-radius: 2vh;
-    width: 100%;
-    margin: 1.6rem 0;
-    padding: .8rem 6rem;
-}
-
-
-
 
 
 
